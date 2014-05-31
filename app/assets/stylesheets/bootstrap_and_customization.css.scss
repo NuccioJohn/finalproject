@@ -1,0 +1,26 @@
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700);
+
+$font-family-sans-serif:    'Libre Baskerville', serif;
+$body-bg:  			        #34495e;
+$navbar-default-bg:         #2c3e50;
+$navbar-default-link-color: #ecf0f1;
+$navbar-height:             65px;
+$jumbotron-bg:              #7f8c8d;
+$jumbotron-color:           #ecf0f1;
+$brand-primary:             #2980b9;
+$panel-bg:                  #7f8c8d;
+
+@import 'bootstrap';
+
+.center {
+     text-align: center;
+}
+
+.navbar-brand {
+	font_weight: bold;
+
+}
+
+.form-group {
+	color: #ecf0f1;
+}
