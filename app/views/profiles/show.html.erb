@@ -1,11 +1,29 @@
-<%= image_tag @profile.image.url(:medium) %>
 
-<p>
-  <strong>About:</strong>
-  <%= @profile.about %>
-</p>
+<div class="row">
+	<div class="col-md-offset-2 col-md-6">
+		<div class="panel panel-default">
+			<div class="center">
+				<%= image_tag @profile.image.url(:medium) %>
+			</div>
+			<div class="panel-body">
 
-<% if @profile.user == current_user %>
-	<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<% end %>
-<%= link_to 'Back', profiles_path %>
+			<p class="form-group">
+			  <strong>About:</strong>
+			  <%= @profile.about %>
+			</p>
+
+			<p class="form-group">
+			  <strong>Email:</strong>
+			  <%= @profile.user.email if @profile.user %>
+			</p>
+
+			<div class="form-group">
+				<% if @profile.user == current_user %>
+				<%= link_to raw('<span class="glyphicon glyphicon-pencil"></span> Edit'), edit_profile_path(@profile), class: "form-group" %> |
+				<% end %>
+				<%= link_to raw('<span class="glyphicon glyphicon-share-alt"></span> Back'), profiles_path, class: "form-group" %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
