@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>About</th>
       <th>User</th>
       <th></th>
@@ -13,6 +14,7 @@
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
+        <td><%= link_to image_tag(profile.image.url(:medium)), profile %></td>
         <td><%= profile.about %></td>
         <td><%= profile.user.email if profile.user %></td>
         <td><%= link_to 'Show', profile %></td>
