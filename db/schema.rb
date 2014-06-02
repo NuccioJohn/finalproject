@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140601221751) do
+ActiveRecord::Schema.define(version: 20140602034053) do
 
   create_table "profiles", force: true do |t|
     t.string   "about"
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(version: 20140601221751) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "name"
+    t.string   "breed"
+    t.string   "religion"
+    t.string   "zodiac"
+    t.string   "interests"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"

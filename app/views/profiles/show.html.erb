@@ -2,6 +2,9 @@
 <div class="row">
 	<div class="col-md-offset-2 col-md-6">
 		<div class="panel panel-default">
+			<h1 class="form-group center">
+			  <%= @profile.name %>
+			</h1>
 			<div class="center">
 				<%= image_tag @profile.image.url(:medium) %>
 			</div>
@@ -13,8 +16,23 @@
 			</p>
 
 			<p class="form-group">
-			  <strong>Email:</strong>
-			  <%= @profile.user.email if @profile.user %>
+			  <strong>Breed:</strong>
+			  <%= @profile.breed %>
+			</p>
+
+			<p class="form-group">
+			  <strong>Zodiac:</strong>
+			  <%= @profile.zodiac %>
+			</p>
+
+			<p class="form-group">
+			  <strong>Religion:</strong>
+			  <%= @profile.religion %>
+			</p>
+
+			<p class="form-group">
+			  <strong>Interests:</strong>
+			  <%= @profile.interests %>
 			</p>
 
 			<div class="form-group">
