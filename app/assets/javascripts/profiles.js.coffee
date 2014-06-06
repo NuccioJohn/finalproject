@@ -7,3 +7,9 @@ $ ->
     $('#profiles').masonry
       itemSelector: '.box'
       isFitWidth: true
+
+#Interval to the carousel
+
+# $('.carousel').carousel({
+#  interval: 2000
+#	})
